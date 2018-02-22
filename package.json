@@ -4,9 +4,7 @@
   "scripts": {
     "dbUp": "db-migrate up --config ./config/database.json -e dev",
     "clean": "rimraf ./build",
-    "start": "node app.js",
-    "dev": "npm run clean; npm run watch; npm run nodemonServer",
-    "start:server": "npm run buildServer && npm run nodemonServer",
+    "start": "npm run buildServer && npm run nodemonServer",
     "buildServer": "babel ./src --out-dir ./build/server --copy-files",
     "nodemonServer": "nodemon ./src/app.js --exec babel-node --presets env --plugins transform-object-rest-spread,transform-class-properties --watch src",
     "server": "node ./build/server/src/app.js"
