@@ -1,0 +1,78 @@
+{
+  "appenders": {
+    "infoAppender": {
+      "type": "file",
+      "filename": "./logs/info.log",
+      "maxLogSize": 10485760,
+      "backups": 3,
+      "layout": {
+        "type": "pattern",
+        "pattern": "[%d{hh:mm:ss:SSS}] [%p] [%c]: %m%n"
+      }
+    },
+    "errorAppender": {
+      "type": "file",
+      "filename": "./logs/error.log",
+      "maxLogSize": 10485760,
+      "backups": 3,
+      "layout": {
+        "type": "pattern",
+        "pattern": "[%d{hh:mm:ss:SSS}] [%p] [%c]: %m%n"
+      }
+    },
+    "infoCsvAppender": {
+      "type": "file",
+      "filename": "./logs/info.csv",
+      "maxLogSize": 10485760,
+      "backups": 3,
+      "layout": {
+        "type": "pattern",
+        "pattern": "%d{hh:mm:ss:SSS}, %p, %c:, %m%n"
+      }
+    },
+    "errorCsvAppender": {
+      "type": "file",
+      "filename": "./logs/error.csv",
+      "maxLogSize": 10485760,
+      "backups": 3,
+      "layout": {
+        "type": "pattern",
+        "pattern": "%d{hh:mm:ss:SSS}, %p, %c:, %m%n"
+      }
+    },
+    "consoleErrorAppender": {
+      "type": "console",
+      "layout": {
+        "type": "pattern",
+        "pattern": "[%d{hh:mm:ss:SSS}]: %m%n"
+      }
+    },
+    "consoleFilterAppender": {
+      "type": "logLevelFilter",
+      "appender": "consoleErrorAppender",
+      "level": "error"
+    },
+    "errorFilterAppender": {
+      "type": "logLevelFilter",
+      "appender": "errorAppender",
+      "level": "error"
+    },
+    "errorCsvFilterAppender": {
+      "type": "logLevelFilter",
+      "appender": "errorCsvAppender",
+      "level": "error"
+    }
+  },
+  "categories": {
+    "default": {
+      "appenders": [
+        "infoAppender",
+        "infoCsvAppender",
+        "errorFilterAppender",
+        "errorCsvFilterAppender",
+        "consoleFilterAppender"
+      ],
+      "level": "info"
+    }
+  }
+}

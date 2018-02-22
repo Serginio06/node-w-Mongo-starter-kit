@@ -1,0 +1,3 @@
+export const USER_EMAIL = "USER_EMAIL";
+export const COMPANY_EMAIL = "COMPANY_EMAIL";
+export const RECOVER_PASSWORD = "RECOVER_PASSWORD";

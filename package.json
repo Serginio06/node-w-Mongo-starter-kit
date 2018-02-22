@@ -1,0 +1,72 @@
+{
+  "name": "node_starter_kit",
+  "version": "0.1.0",
+  "scripts": {
+    "dbUp": "db-migrate up --config ./config/database.json -e dev",
+    "clean": "rimraf ./build",
+    "start": "node app.js",
+    "dev": "npm run clean; npm run watch; npm run nodemonServer",
+    "start:server": "npm run buildServer && npm run nodemonServer",
+    "buildServer": "babel ./src --out-dir ./build/server --copy-files",
+    "nodemonServer": "nodemon ./src/app.js --exec babel-node --presets env --plugins transform-object-rest-spread,transform-class-properties --watch src",
+    "server": "node ./build/server/src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Serhii Ivanchecnko",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Serhii_Ivanchenko/treasure#readme",
+  "babel": {
+    "presets": [
+      "es2015",
+      "env"
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-class-properties"
+    ]
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "connect-mongo": "^2.0.0",
+    "connect-mongodb-session": "^1.4.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "css-loader": "^0.28.7",
+    "db-migrate": "^0.10.2",
+    "ejs": "^2.5.7",
+    "email-validator": "^1.1.1",
+    "express": "^4.16.2",
+    "express-mongo-sanitize": "^1.3.2",
+    "express-sanitizer": "^1.0.2",
+    "express-session": "^1.15.6",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "fs-extra-promise": "^1.0.1",
+    "helmet": "^3.9.0",
+    "log4js": "^2.3.12",
+    "md5": "^2.2.1",
+    "mongoose": "^4.13.6",
+    "nodemailer": "^4.4.1",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "open-browser-webpack-plugin": "0.0.5",
+    "resolve-url-loader": "^2.2.1",
+    "sass-loader": "^6.0.6",
+    "source-map-loader": "^0.2.3",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "nodemon": "^1.14.11"
+  }
+}

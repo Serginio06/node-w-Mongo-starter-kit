@@ -1,0 +1,26 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-react"
+  ],
+  "jsRules": {},
+  "rules": {
+    "no-var-requires": false,
+    "jsx-boolean-value": false,
+    "jsx-alignment": false,
+    "jsx-wrap-multiline": false,
+    "no-string-literal": false,
+    "no-empty-interface": false,
+    "no-empty": false,
+    "one-variable-per-declaration": false,
+    "unified-signatures": false,
+    "no-reference": false,
+    "semicolon": false,
+    "no-console": false,
+    "max-line-length": [140],
+    "jsx-no-multiline-js":false,
+    "no-shadowed-variable": false
+  },
+  "rulesDirectory": []
+}
