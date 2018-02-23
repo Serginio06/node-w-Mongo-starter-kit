@@ -1,9 +1,22 @@
 
-<h1>This is  with NodeJS+Express+MongoDB/Mongoose starter kit </h1.
-It uses babel to create build so you are free to use import, spread, classes and ES2017 fetures
- in your project.
+<h1>NodeJS+Express+MongoDB/Mongoose starter kit</h1>
+
+<h2>This kit was initial created for middle complexity project and show good result 
+after a year on production
  
- ---
+ <h3>Features</h3>
+ **Use ES6/7 features out of the box**<br/>
+it use babel to create build so you are free to use import, spread, classes and ES2017 features 
+in your project out of the box.<br/>
+<br/>
+ **Smart logger integration**<br/>
+Integrated and configured logger allow you easily monitor user request and quickly find failed or
+ stuck one as well as help to find place and reason of fail.<br/>
+<br/>
+ **Authentication**<br/>
+Integrated authentication with facebook and password recovery for name/pass option.<br/>
+<br/>
+ 
   ## Table of contents
   * [Scripts](#scripts)
   * [Folder structure](#folder-structure)
