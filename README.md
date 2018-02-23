@@ -5,15 +5,15 @@
 after a year on production
  
  <h3>Features</h3>
- **Use ES6/7 features out of the box**<br/>
+ <b>Use ES6/7 features out of the box</b><br/>
 it use babel to create build so you are free to use import, spread, classes and ES2017 features 
 in your project out of the box.<br/>
 <br/>
- **Smart logger integration**<br/>
+ <b>Smart logger integration</b><br/>
 Integrated and configured logger allow you easily monitor user request and quickly find failed or
  stuck one as well as help to find place and reason of fail.<br/>
 <br/>
- **Authentication**<br/>
+ <b>Authentication</b><br/>
 Integrated authentication with facebook and password recovery for name/pass option.<br/>
 <br/>
  
