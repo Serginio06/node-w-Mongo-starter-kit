@@ -4,7 +4,7 @@
 <h2>This kit was initial created for middle complexity project and show good result 
 after a year on production
  
- <h3>Features</h3>
+ <h3 align="center">Features</h3>
  <b>Use ES6/7 features out of the box</b><br/>
 it use babel to create build so you are free to use import, spread, classes and ES2017 features 
 in your project out of the box.<br/>
